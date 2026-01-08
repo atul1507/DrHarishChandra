@@ -59,31 +59,66 @@ const Publications = () => {
         </thead>
 
         <tbody>
-          {publications.map(pub => (
+          {publications.map((pub) => (
             <tr
               key={pub.id}
-              className="border-b border-[#3C2F2B] hover:bg-[#3C2F2B] hover:text-white transition-colors"
+              className="
+                group
+                border-b border-[#3C2F2B]
+                hover:bg-[#3C2F2B]
+                hover:text-white
+                transition-colors
+              "
             >
+              {/* S. No */}
               <td className="py-4">{pub.id}</td>
 
+              {/* Title */}
               <td className="py-4">
                 {pub.link ? (
                   <a
                     href={pub.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 no-underline"
+                    className="no-underline"
                   >
-                    <span>{pub.title}</span>
-                    <ArrowUpRight size={16} />
+                    {pub.title}
                   </a>
                 ) : (
                   <span>{pub.title}</span>
                 )}
               </td>
 
-              <td className="py-4 text-center">
-                {pub.year}
+              {/* Year + separate Arrow */}
+              <td className="py-4">
+                <div className="flex items-center justify-center gap-3">
+                  {/* Year text ONLY */}
+                  <span>{pub.year}</span>
+
+                  {/* Arrow button ONLY if link exists */}
+                  {pub.link && (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        flex items-center justify-center
+                        w-8 h-8
+                        rounded-md
+                        border border-[#3C2F2B]
+                        text-[#3C2F2B]
+                        cursor-pointer
+                        transition-all
+
+                        group-hover:border-white
+                        group-hover:text-white
+                      "
+                      aria-label="Open publication"
+                    >
+                      <ArrowUpRight size={16} />
+                    </a>
+                  )}
+                </div>
               </td>
             </tr>
           ))}
