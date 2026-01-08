@@ -50,12 +50,12 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden bg-[#e6ccbb] border-t shadow-md">
-          <MobileNavItem to="/" label="Home" />
-          <MobileNavItem to="/profile" label="Profile" />
-          <MobileNavItem to="/research" label="Research" />
-          <MobileNavItem to="/publications" label="Publications" />
-          <MobileNavItem to="/achievements" label="Achievements" />
-          <MobileNavItem to="/contact" label="Contact" />
+          <MobileNavItem to="/" label="Home" onClick={() => setOpen(false)} />
+          <MobileNavItem to="/profile" label="Profile" onClick={() => setOpen(false)} />
+          <MobileNavItem to="/research" label="Research" onClick={() => setOpen(false)} />
+          <MobileNavItem to="/publications" label="Publications" onClick={() => setOpen(false)} />
+          <MobileNavItem to="/achievements" label="Achievements" onClick={() => setOpen(false)} />
+          <MobileNavItem to="/contact" label="Contact" onClick={() => setOpen(false)} />
         </div>
       )}
     </header>
@@ -77,9 +77,10 @@ const NavItem = ({ to, icon, label }) => (
   </Link>
 );
 
-const MobileNavItem = ({ to, label }) => (
+const MobileNavItem = ({ to, label, onClick }) => (
   <Link
     to={to}
+    onClick={onClick}
     className="
       block px-6 py-3
       text-[#3C2F2B]
