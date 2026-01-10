@@ -57,6 +57,7 @@ const Profile = () => {
               ["Contractual Faculty", "Lucknow University (2007 – 2008)"],
               ["Guest Faculty (Under UGC Norms)", "Lucknow University (2008 – 2011)"],
               ["Senior Research Fellow", "BBD University, Lucknow (2012 – 2014)"],
+              ["Assistant Professor", "Rajkiya PG College, Uttarkashi, Uttarakhand (2014 – 2015)"],
               ["Assistant Professor, Dept. of Mathematics and Scientific Computing", "MMMUT, Gorakhpur (2015 – Present)"],
               ["Officer In Charge, Lawn Tennis", "MMMUT, Gorakhpur (2015 – 2017)"],
               ["Member, Library Affairs Committee", "MMMUT, Gorakhpur (2015)"],

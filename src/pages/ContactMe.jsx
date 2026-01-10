@@ -2,23 +2,23 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="border border-[#F9C97C] p-3 sm:p-4 md:p-6">
+    <div className="border border-[#F9C97C] p-6">
 
       {/* Title */}
-      <h2 className="text-2xl sm:text-3xl font-semibold text-[#F9A825] mb-6">
+      <h2 className="text-3xl font-semibold text-[#F9C97C] mb-6">
         Contact Details
       </h2>
 
       {/* Gradient Card */}
       <div
         className="
-          rounded-xl p-4 sm:p-6
+          rounded-xl p-6
           w-full
-          bg-linear-to-br from-[#F9C97C] to-white
+          bg-gradient-to-br from-[#F9C97C] to-white
           text-black
         "
       >
-        <h3 className="text-xl sm:text-2xl font-semibold mb-1">
+        <h3 className="text-2xl font-semibold mb-1">
           Dr. Harish Chandra
         </h3>
 

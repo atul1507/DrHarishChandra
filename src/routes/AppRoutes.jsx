@@ -4,7 +4,14 @@ import Profile from "../pages/Profile";
 import Teaching from "../pages/Teaching";
 import Research from "../pages/Research";
 import Publications from "../pages/Publications";
+import Workshops from "../pages/Workshops";
+import PaperPresentation from "../pages/PaperPresentation";
+import Participation from "../pages/Participation";
+import Talks from "../pages/Talks";
+import ExtraAcademicActivity from "../pages/ExtraAcademicActivity";
 import Achievements from "../pages/Achievements";
+import Awarded from "../pages/Awarded";
+import Gallery from "../pages/Gallery";
 import Contact from "../pages/ContactMe";
 
 const AppRoutes = () => {
@@ -15,7 +22,14 @@ const AppRoutes = () => {
       <Route path="/teaching" element={<Teaching />} />
       <Route path="/research" element={<Research />} />
       <Route path="/publications" element={<Publications />} />
+      <Route path="/workshops" element={<Workshops />} />
+      <Route path="/paper-presentation" element={<PaperPresentation />} />
+      <Route path="/participation" element={<Participation />} />
+      <Route path="/talks" element={<Talks />} />
+      <Route path="/extra-academic-activity" element={<ExtraAcademicActivity />} />
       <Route path="/achievements" element={<Achievements />} />
+      <Route path="/awarded" element={<Awarded />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
   );
