@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-
 const Publications = () => {
   const publications = [
     { id: 1, title: "SmartAgri-IDQ:Quantum-Resistant Identity-Based Data Authentication Protocol for Smart Agriculture Iot", year: 2026, link: " " },
@@ -48,86 +46,49 @@ const Publications = () => {
   ];
 
   return (
-    <div className="border border-[#E65100] p-6">
-      <h2 className="text-3xl font-semibold text-[#E65100] mb-4">
+    <div className="p-3 sm:p-4 md:p-6">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F9A825] mb-4 sm:mb-6">
         Publications
-      </h2>
+      </h1>
 
-      <table className="w-full border-collapse text-[#E65100]">
-        <thead>
-          <tr className="border-t border-b border-[#3C2F2B] font-semibold text-left">
-            <th className="py-3 w-16">S. No.</th>
-            <th className="py-3">Title</th>
-            <th className="py-3 w-40 text-center">Year</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {publications.map((pub) => (
-            <tr
-              key={pub.id}
-              className="
-                group
-                border-b border-[#E65100]
-                hover:bg-[#E65100]
-                hover:text-white
-                transition-colors
-              "
-            >
-              {/* S. No */}
-              <td className="py-4">{pub.id}</td>
-
-              {/* Title */}
-              <td className="py-4">
-                {pub.link ? (
-                  <a
-                    href={pub.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="no-underline"
-                  >
-                    {pub.title}
-                  </a>
-                ) : (
-                  <span>{pub.title}</span>
-                )}
-              </td>
-
-              {/* Year + separate Arrow */}
-              <td className="py-4">
-                <div className="flex items-center justify-center gap-3">
-                  {/* Year text ONLY */}
-                  <span>{pub.year}</span>
-
-                  {/* Arrow button ONLY if link exists */}
-                  {pub.link && (
-                    <a
-                      href={pub.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="
-                        flex items-center justify-center
-                        w-8 h-8
-                        rounded-md
-                        border border-[#E65100]
-                        text-[#E65100]
-                        cursor-pointer
-                        transition-all
-
-                        group-hover:border-white
-                        group-hover:text-white
-                      "
-                      aria-label="Open publication"
-                    >
-                      <ArrowUpRight size={16} />
-                    </a>
-                  )}
-                </div>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="bg-white rounded-lg border-2 border-[#F9C97C] shadow-sm overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm sm:text-base">
+            <thead>
+              <tr className="bg-[#F9C97C]">
+                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-black">S.No.</th>
+                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-black">Title</th>
+                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-black">Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              {publications.length > 0 ? (
+                publications.map((pub, index) => (
+                  <tr key={pub.id} className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="px-3 sm:px-4 py-2 sm:py-3">{index + 1}</td>
+                    <td className="px-3 sm:px-4 py-2 sm:py-3">
+                      {pub.link ? (
+                        <a href={pub.link} target="_blank" rel="noopener noreferrer" className="text-[#0f172a] hover:underline">
+                          {pub.title}
+                        </a>
+                      ) : (
+                        <span className="text-[#0f172a]">{pub.title}</span>
+                      )}
+                    </td>
+                    <td className="px-3 sm:px-4 py-2 sm:py-3">{pub.year}</td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="3" className="px-3 sm:px-4 py-8 text-center text-gray-500">
+                    No publications added yet.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

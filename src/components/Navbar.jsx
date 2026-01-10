@@ -156,13 +156,13 @@ const Navbar = () => {
             
             {mobileResearchOpen && (
               <div className="bg-gray-50">
-                <MobileSubNavItem to="/research" label="Research Projects" onClick={() => setOpen(false)} />
-                <MobileSubNavItem to="/publications" label="Publications" onClick={() => setOpen(false)} />
-                <MobileSubNavItem to="/workshops" label="Workshop" onClick={() => setOpen(false)} />
-                <MobileSubNavItem to="/paper-presentation" label="Paper Presentation" onClick={() => setOpen(false)} />
-                <MobileSubNavItem to="/participation" label="Miscellaneous Participation" onClick={() => setOpen(false)} />
-                <MobileSubNavItem to="/talks" label="Talk Delivered" onClick={() => setOpen(false)} />
-                <MobileSubNavItem to="/extra-academic-activity" label="Extra Academic Activity" onClick={() => setOpen(false)} />
+                <MobileSubNavItem to="/research" label="Research Projects" icon={<FlaskConical size={16} />} onClick={() => setOpen(false)} />
+                <MobileSubNavItem to="/publications" label="Publications" icon={<BookOpen size={16} />} onClick={() => setOpen(false)} />
+                <MobileSubNavItem to="/workshops" label="Workshop" icon={<Briefcase size={16} />} onClick={() => setOpen(false)} />
+                <MobileSubNavItem to="/paper-presentation" label="Paper Presentation" icon={<Presentation size={16} />} onClick={() => setOpen(false)} />
+                <MobileSubNavItem to="/participation" label="Miscellaneous Participation" icon={<Users size={16} />} onClick={() => setOpen(false)} />
+                <MobileSubNavItem to="/talks" label="Talk Delivered" icon={<Mic size={16} />} onClick={() => setOpen(false)} />
+                <MobileSubNavItem to="/extra-academic-activity" label="Extra Academic Activity" icon={<Trophy size={16} />} onClick={() => setOpen(false)} />
               </div>
             )}
           </div>
@@ -248,17 +248,22 @@ const DropdownItem = ({ to, icon, label }) => (
   </Link>
 );
 
-const MobileSubNavItem = ({ to, label, onClick }) => (
+const MobileSubNavItem = ({ to, label, onClick, icon }) => (
   <Link
     to={to}
     onClick={onClick}
     className="
-      group relative block px-10 py-2.5 overflow-hidden
+      group relative flex items-center gap-3 px-10 py-2.5 overflow-hidden
       text-black text-sm
       hover:bg-gray-200 hover:text-black
       transition-all duration-300 ease-out
     "
   >
+    {icon && (
+      <span className="transition-transform duration-300 text-[#F9A825]">
+        {icon}
+      </span>
+    )}
     <span className="relative z-10 inline-block transition-all duration-300">
       {label}
     </span>
