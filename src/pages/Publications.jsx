@@ -44,19 +44,20 @@ const Publications = () => {
   ];
 
   return (
-    <div className="border border-[#3C2F2B] p-6">
-      <h2 className="text-3xl font-semibold text-[#3C2F2B] mb-4">
+    <div className="border border-[#F9C97C] p-3 sm:p-4 md:p-6">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-[#F9A825] mb-4">
         Publications
       </h2>
 
-      <table className="w-full border-collapse text-[#3C2F2B]">
-        <thead>
-          <tr className="border-t border-b border-[#3C2F2B] font-semibold text-left">
-            <th className="py-3 w-16">S. No.</th>
-            <th className="py-3">Title</th>
-            <th className="py-3 w-40 text-center">Year</th>
-          </tr>
-        </thead>
+      <div className="overflow-x-auto -mx-3 sm:mx-0">
+        <table className="w-full border-collapse text-black min-w-160 sm:min-w-0">
+          <thead>
+            <tr className="border-t border-b border-[#F9C97C] font-semibold text-left">
+              <th className="py-3 w-12 sm:w-16 px-2 sm:px-0 text-sm sm:text-base">S. No.</th>
+              <th className="py-3 px-2 sm:px-0 text-sm sm:text-base">Title</th>
+              <th className="py-3 w-32 sm:w-40 text-center px-2 sm:px-0 text-sm sm:text-base">Year</th>
+            </tr>
+          </thead>
 
         <tbody>
           {publications.map((pub) => (
@@ -64,17 +65,17 @@ const Publications = () => {
               key={pub.id}
               className="
                 group
-                border-b border-[#3C2F2B]
-                hover:bg-[#3C2F2B]
+                border-b border-[#F9C97C]
+                hover:bg-[#F9C97C]
                 hover:text-white
                 transition-colors
               "
             >
               {/* S. No */}
-              <td className="py-4">{pub.id}</td>
+              <td className="py-3 sm:py-4 px-2 sm:px-0 text-sm sm:text-base">{pub.id}</td>
 
               {/* Title */}
-              <td className="py-4">
+              <td className="py-3 sm:py-4 px-2 sm:px-0 text-sm sm:text-base">
                 {pub.link ? (
                   <a
                     href={pub.link}
@@ -90,8 +91,8 @@ const Publications = () => {
               </td>
 
               {/* Year + separate Arrow */}
-              <td className="py-4">
-                <div className="flex items-center justify-center gap-3">
+              <td className="py-3 sm:py-4 px-2 sm:px-0 text-sm sm:text-base">
+                <div className="flex items-center justify-center gap-2 sm:gap-3">
                   {/* Year text ONLY */}
                   <span>{pub.year}</span>
 
@@ -103,10 +104,10 @@ const Publications = () => {
                       rel="noopener noreferrer"
                       className="
                         flex items-center justify-center
-                        w-8 h-8
+                        w-6 h-6 sm:w-8 sm:h-8
                         rounded-md
-                        border border-[#3C2F2B]
-                        text-[#3C2F2B]
+                        border border-[#F9C97C]
+                        text-[#F9A825]
                         cursor-pointer
                         transition-all
 
@@ -115,7 +116,7 @@ const Publications = () => {
                       "
                       aria-label="Open publication"
                     >
-                      <ArrowUpRight size={16} />
+                      <ArrowUpRight size={14} className="sm:w-4 sm:h-4" />
                     </a>
                   )}
                 </div>
@@ -124,6 +125,7 @@ const Publications = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
