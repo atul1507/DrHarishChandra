@@ -1,13 +1,13 @@
 const Home = () => {
   return (
-    <main className="max-w-7xl mx-auto px-6 py-10">
+    <main className="max-w-7xl mx-auto px-2 sm:px-6 py-4 sm:py-10">
 
 
       {/* Border wrapper */}
-      <div className="border border-[#3C2F2B] p-4">
+      <div className="border border-[#F9C97C] p-3 sm:p-4 md:p-6 overflow-visible">
 
         {/* Hero Image */}
-        <section className="w-full">
+        <section className="w-full overflow-visible">
           <picture>
             <source
               media="(min-width: 1024px)"
@@ -16,13 +16,13 @@ const Home = () => {
             <img
               src="/hero-mobile.jpeg"
               alt="Hero"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain sm:rounded-xl shadow-xl transform scale-105 transition-transform duration-500 hover:scale-110 border-4 border-white rounded-lg"
             />
           </picture>
         </section>
 
         {/* Text Content */}
-        <section className="mt-10 text-gray-700 text-lg leading-relaxed">
+        <section className="mt-6 sm:mt-10 text-black text-base sm:text-lg leading-relaxed">
           <p>
             <span className="font-semibold">Dr. Harish Chandra</span> is an Assistant Professor of Mathematics in the Department of Mathematics and Scientific Computing at Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur, where he has been actively engaged in teaching, research, and academic administration for nearly two decades.
           </p>

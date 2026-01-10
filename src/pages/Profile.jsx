@@ -1,17 +1,17 @@
 const Profile = () => {
   return (
-    <div className="border border-[#3C2F2B] p-6">
+    <div className="border border-[#F9C97C] p-3 sm:p-4 md:p-6">
 
       {/* Academic Background */}
       <section>
-        <h2 className="text-3xl font-semibold text-[#3C2F2B]">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-[#F9A825]">
           Academic Background
         </h2>
-        <hr className="my-3 border-[#3C2F2B]" />
+        <hr className="my-3 border-[#F9C97C]" />
 
-        <table className="w-full border-collapse text-gray-600">
+        <table className="w-full border-collapse text-black">
           <thead>
-            <tr className="text-left font-semibold border-b border-[#3C2F2B] text-[#3C2F2B]">
+            <tr className="text-left font-semibold border-b border-[#F9C97C] text-[#F9A825]">
               <th className="py-2">Degree</th>
               <th className="py-2">Institute of Study</th>
               <th className="py-2">Year</th>
@@ -27,7 +27,7 @@ const Profile = () => {
               ["Intermediate", "U.P. Board", "2002"],
               ["High School", "U.P. Board", "2000"],
             ].map((row, i) => (
-              <tr key={i} className="border-t border-[#3C2F2B]">
+              <tr key={i} className="border-t border-[#F9C97C]">
                 <td className="py-3">{row[0]}</td>
                 <td className="py-3">{row[1]}</td>
                 <td className="py-3">{row[2]}</td>
@@ -39,14 +39,14 @@ const Profile = () => {
 
       {/* Work Experience */}
       <section className="mt-10">
-        <h2 className="text-3xl font-semibold text-[#3C2F2B]">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-[#F9A825]">
           Work Experience
         </h2>
-        <hr className="my-3 border-[#3C2F2B]" />
+        <hr className="my-3 border-[#F9C97C]" />
 
-        <table className="w-full border-collapse text-gray-600">
+        <table className="w-full border-collapse text-black">
           <thead>
-            <tr className="text-left font-semibold border-b border-[#3C2F2B] text-[#3C2F2B]">
+            <tr className="text-left font-semibold border-b border-[#F9C97C] text-[#F9A825]">
               <th className="py-2 w-1/2">Position</th>
               <th className="py-2">Area</th>
             </tr>
@@ -77,7 +77,7 @@ const Profile = () => {
               ["Warden, Tagore Hostel", "MMMUT, Gorakhpur (2020)"],
               ["Member, EDP Cell", "MMMUT, Gorakhpur (2021)"],
             ].map((row, i) => (
-              <tr key={i} className="border-t border-[#3C2F2B]">
+              <tr key={i} className="border-t border-[#F9C97C]">
                 <td className="py-4 pr-8">{row[0]}</td>
                 <td className="py-4">{row[1]}</td>
               </tr>

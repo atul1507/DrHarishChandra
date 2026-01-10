@@ -12,17 +12,17 @@ const ProfileSidebar = () => {
     <aside className="w-full lg:w-1/4">
 
       {/* Profile Image */}
-      <div className="border border-[#e6ccbb] p-2">
+      <div className=" p-2 overflow-visible">
         <img
           src="/profile.jpg"
           alt="Dr. Harish Chandra"
-          className={`w-full h-auto transition-transform duration-500 ${slideClass}`}
+          className={`w-full h-auto shadow-gray-700 transform hover:scale-105 transition duration-300 z-10 shadow-xl rounded-xl ${slideClass}`}
         />
       </div>
 
       {/* Office Hours */}
       <div className="mt-4 text-center">
-        <h3 className="font-semibold text-lg text-[#3C2F2B]">
+        <h3 className="font-semibold text-lg text-[#F9A825]">
           Office Hours
         </h3>
         <p className="text-gray-600 mt-1">

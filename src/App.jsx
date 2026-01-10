@@ -9,11 +9,11 @@ function App() {
   const isHome = location.pathname === "/";
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-black">
       <Navbar />
 
       {/* Main content grows to push footer down */}
-      <main className="flex-grow max-w-7xl mx-auto px-6 py-10">
+      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10 w-full">
         {isHome ? (
           // Home page: full width
           <AppRoutes />
